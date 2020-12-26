@@ -1,0 +1,26 @@
+{
+  "name": "thecocktaildb",
+  "version": "1.0.0",
+  "description": "Project using CocktailDB API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CBMaio/TheCocktailDB-API.git"
+  },
+  "keywords": [
+    "Drink",
+    "cocktail",
+    "ingredients",
+    "instructions",
+    "bar"
+  ],
+  "author": "Carolina Belén Maio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CBMaio/TheCocktailDB-API/issues"
+  },
+  "homepage": "https://github.com/CBMaio/TheCocktailDB-API#readme"
+}

@@ -21,18 +21,17 @@ const createNode = ({
   const node = `
     <div class="col-md-4 col-12" id="${idDrink}">
       <div class="card card-style mt-5 ml-md-3">
-        <img src="${strDrinkThumb}" class="drink-img"/>
+        <div class="img-container">
+          <img src="${strDrinkThumb}" class="drink-img"/>
+          <div class="instructions">
+            <p id="text-${idDrink}> ${showInstructions(idDrink)} </p>
+          </div>
+        </div>
         <div class="card-body">
-
           <h5 class="card-title"> ${strDrink} </h5>
           <p class="card-text">Category: ${strCategory}.</p>
           <p> Alcoholic: ${strAlcoholic} </p>
-          
           <p><b>Ingredients:</b> ${selectDrink(idDrink).join(', ')}</p>
-          <p id="text-${idDrink}"></p>
-          <div>
-            <button onclick="showInstructions(${idDrink})" class="w-100  btn btn-block btn-secondary">Instructions</button>
-          </div>
         </div>
       </div>
     </div>
@@ -59,15 +58,16 @@ const selectDrink = (idDrink) => {
   return ingredients;
 };
 
+//Muestra las instrucciones de preparación del trago
 const showInstructions = (idDrink) => {
   let drink = drinks.find((drink) => drink.idDrink === `${idDrink}`);
-  document.getElementById(`text-${idDrink}`).innerHTML = `
-    <div class="alert alert-success" role="alert">
+  const description = `
     <h4 class="alert-heading">Instructions</h4>
     <p>${drink.strInstructions}</p>
     <hr>
-    </div>
   `
+
+  return description
 };
 
 //iteración de array drinks, muestra una card por cada drink
