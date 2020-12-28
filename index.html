@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <section class="main-section">
+    <section class="main-section" id="main-section">
       <div class="container">
         <header class="header">
           <div class="row justify-content-center container-el text-center">
@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="row justify-content-center container-el">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 search-container">
               <input
                 type="text"
                 placeholder="Search by ingredient or name"
@@ -48,13 +48,36 @@
         </header>
         <div class="row justify-content-center">
           <div class="col-12 col-md-6">
-            <p class="error-text text-center mb-0" id="try-again-text"></p>
+            <p class="error-text text-center mb-0 mt-4" id="try-again-text"></p>
           </div>
 
-          <div class="row mt-5 justify-content-center m" id="drinks"></div>
+          <div class="row justify-content-center m" id="drinks"></div>
         </div>
       </div>
+      <div class="up-arrow-container">
+        <a href="#main-section">
+          <img src="./img/up-arrow.png" alt="Up Arrow"/>
+        </a>
+      </div>
+
     </section>
+
+    <footer class="container-fluid justify-content-center footer d-flex">
+      <div class="container text-container">
+        <p class="m-0 text-white"><small>Carolina Belén Maio</small></p>
+        <div class="d-flex align-items-center information-container">
+          <p class="mb-0 mr-4 text-white margin-r">
+            <small>2020</small>
+          </p>
+          <p class="mb-0 text-white">
+            <small>
+              <a href="https://github.com/CBMaio/TheCocktailDB-API"
+                >https://github.com/CBMaio/TheCocktailDB-API</a>
+            </small>
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script src="./js/app.js"></script>
   </body>

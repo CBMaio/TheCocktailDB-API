@@ -11,6 +11,7 @@ body {
 .main-section {
   padding: 30px;
   background-color: rgb(35, 3, 18);
+  min-height: 84vh;
 }
 
 .drink-img {
@@ -59,7 +60,7 @@ body {
   width: 60%;
 }
 
-.introduction{
+.introduction {
   width: 60%;
   margin: auto;
 }
@@ -98,6 +99,52 @@ body {
   color: white;
 }
 
+.up-arrow-container {
+  border-top: 1px solid white;
+  background-color: hsl(332, 84%, 4%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6vh;
+}
+
+.footer {
+  background-color: hsl(359, 77%, 25%);
+  min-height: 10vh;
+  margin-bottom: 40px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  color: rgb(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.text-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.margin-r {
+  margin-right: 20px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .introduction,
+  .search-container {
+    width: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .principal-title {
@@ -105,6 +152,10 @@ body {
   }
 
   .container-el {
+    width: 100%;
+  }
+
+  .introduction {
     width: 100%;
   }
 
@@ -120,4 +171,15 @@ body {
     max-width: 100%;
   }
 
+  .text-container {
+    flex-direction: column;
+  }
+
+  .information-container {
+    flex-direction: column;
+  }
+
+  .margin-r {
+    margin-right: 0px;
+  }
 }
