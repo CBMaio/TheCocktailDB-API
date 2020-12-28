@@ -64,17 +64,55 @@ body {
   letter-spacing: 1px;
   line-height: 48px;
   color: white;
+  font-size: 48px;
+}
+
+.btn-style {
+  background-color: hsl(359, 77%, 47%);
+  color: white;
+  outline: none;
+}
+
+.btn-style:hover {
+  background-color: hsl(359, 77%, 40%);
+  color: white;
 }
 
 .card {
   background: rgba(255, 255, 255, 0.3);
   color: white;
-  border: 1px solid rgba(100,100,100, .125);
+  border: 1px solid rgba(100, 100, 100, 0.125);
+}
+
+.card-body {
+  height: 250px;
+  overflow: auto;
+}
+
+.error-text {
+  color: white;
 }
 
 
 @media (max-width: 768px) {
-    .container-el {
-        width: 90%;
-      }
+  .principal-title {
+    font-size: 36px;
+  }
+
+  .container-el {
+    width: 100%;
+  }
+
+  .card-body {
+    height: auto;
+  }
+
+  .title-container {
+    padding: 0;
+  }
+
+  .img-logo {
+    max-width: 100%;
+  }
+
 }

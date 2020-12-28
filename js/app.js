@@ -28,9 +28,9 @@ const createNode = ({
         </div>
         <div class="card-body">
           <h5 class="card-title"> ${strDrink} </h5>
-          <p class="card-text">Category: ${strCategory}.</p>
-          <p> Alcoholic: ${strAlcoholic} </p>
-          <p><b>Ingredients:</b> ${selectDrink(idDrink).join(", ")}</p>
+          <p class="card-text"> <b>Category: </b> ${strCategory}.</p>
+          <p> <b>Alcoholic: </b> ${strAlcoholic}. </p>
+          <p class="mb-3 mb-sm-0"><b>Ingredients:</b> ${selectDrink(idDrink).join(", ")}.</p>
         </div>
       </div>
     </div>
@@ -79,12 +79,13 @@ const iterateDrinks = (drinks) => {
 
 //muestra mensaje si no hay coincidencias de búsqueda y vuelve a traer los elementos de drinks originales
 const showMessage = async () => {
-  console.log("no hay coincidencias");
+  document.getElementById('try-again-text').innerHTML = 'Upsss... Please, try again!'
   drinks = await fetchData(URL);
 };
 
 //toma el valor del input search y genera un nuevo array con los tragos q contengan ese ingrediente
 const searchDrink = async () => {
+  document.getElementById('try-again-text').innerHTML = ''
   drinks.map((drink) => del(drink.idDrink));
   const { value } = document.getElementById("ingredient-name");
   const urlSearch = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`;
