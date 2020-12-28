@@ -59,6 +59,11 @@ body {
   width: 60%;
 }
 
+.introduction{
+  width: 60%;
+  margin: auto;
+}
+
 .principal-title {
   text-transform: capitalize;
   letter-spacing: 1px;
